@@ -7,25 +7,60 @@
       close
     </mat-icon>
   </button>
-  <app-menu></app-menu>
+  <span>2022國立臺灣海洋大學徵才月</span>
+  <app-menu *ngIf="TopMenuOn"></app-menu>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav">
-    <button mat-button class="menu-button" (click)="negativePage('./home')">
+    <button mat-button class="menu-button" routerLink='/home' (click)="clickSidenavMenu();">
       <mat-icon>home</mat-icon>
-      <span>Home</span>
+      <span>首頁</span>
     </button>
-    <mat-divider></mat-divider>
-    <button mat-button class="menu-button" (click)="negativePage('./about')">
+    <button mat-button class="menu-button" routerLink='/home' (click)="clickSidenavMenu();">
+      <mat-icon>groups</mat-icon>
+      <span>徵才博覽會</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/seminar" (click)="clickSidenavMenu();">
+      <mat-icon>contacts</mat-icon>
+      <span>企業說明會</span>
+    </button>
+
+
+    <button mat-button class="menu-button" [matMenuTriggerFor]="ActivityMenu">
+      <mat-icon>local_activity</mat-icon>
+      <span>徵才月活動</span>
+    </button>
+    <mat-menu #ActivityMenu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="clickSidenavMenu();">IG抽獎</button>
+      <button mat-menu-item (click)="clickSidenavMenu();">紀念品兌換</button>
+    </mat-menu>
+    <button mat-button class="menu-button" [matMenuTriggerFor]="preMenu">
+      <mat-icon>remove_red_eye</mat-icon>
+      <span>歷屆活動</span>
+    </button>
+    <mat-menu #preMenu="matMenu" xPosition="before">
+      <a href="http://ntoudoiac20190319.mystrikingly.com/" target="_blank"><button mat-menu-item>2019</button></a>
+      <a href="https://doiac.github.io/2020/" target="_blank"><button mat-menu-item>2020</button></a>
+      <a href="https://doiac.github.io/2021/" target="_blank"><button mat-menu-item>2021</button></a>
+    </mat-menu>
+    <a href="https://academic.ntou.edu.tw/p/412-1005-3051.php?Lang=zh-tw" target="_blank">
+      <button mat-button class="menu-button">
+        <mat-icon>info</mat-icon>
+        <span>關於我們</span>
+      </button>
+    </a>
+    <!-- <mat-divider></mat-divider> -->
+    <!-- <button mat-button class="menu-button" (click)="negativePage('./about')">
       <mat-icon>info</mat-icon>
       <span>About</span>
-    </button>
+    </button> -->
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z4">
+    <div class="mat-elevation-z4 content">
       <router-outlet></router-outlet>
     </div>
 </mat-sidenav-content>
+
 
 <!-- <router-outlet></router-outlet> -->

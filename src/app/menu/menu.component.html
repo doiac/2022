@@ -1,31 +1,20 @@
 <button mat-button routerLink='/home'>首頁</button>
 
-<button mat-button [matMenuTriggerFor]="menu">徵才博覽會</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+<button mat-button routerLink='/home'>徵才博覽會</button>
+
+<button mat-button routerLink='/seminar'>企業說明會</button>
+
+<button mat-button [matMenuTriggerFor]="ActivityMenu">徵才月活動</button>
+<mat-menu #ActivityMenu="matMenu">
+  <button mat-menu-item>IG抽獎</button>
+  <button mat-menu-item>紀念品兌換</button>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="menu">徵才說明會</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+<button mat-button [matMenuTriggerFor]="preMenu">歷屆活動</button>
+<mat-menu #preMenu="matMenu">
+  <a href="http://ntoudoiac20190319.mystrikingly.com/" target="_blank"><button mat-menu-item>2019</button></a>
+  <a href="https://doiac.github.io/2020/" target="_blank"><button mat-menu-item>2020</button></a>
+  <a href="https://doiac.github.io/2021/" target="_blank"><button mat-menu-item>2021</button></a>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="menu">徵才月活動</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="menu">歷屆活動</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="menu">關於我們</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<a href="https://academic.ntou.edu.tw/p/412-1005-3051.php?Lang=zh-tw" target="_blank"><button mat-button>關於我們</button></a>

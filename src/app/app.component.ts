@@ -10,6 +10,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = '2022國立臺海大就業博覽會';
+  TopMenuOn = true;
+  // LeftMenuOn = false;
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
@@ -22,15 +24,21 @@ export class AppComponent {
     this.router.navigate([pageName]);
   }
 
+  public clickSidenavMenu(){
+    console.log('click');
+    this.sidenav.close();
+  }
+
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 840px)']).subscribe((res) => {
+      this.sidenav.close();
       if(res.matches){
         this.sidenav.mode = 'over';
-        this.sidenav.close();
+        this.TopMenuOn = false;
       }
       else{
         this.sidenav.mode = 'side';
-        this.sidenav.open();
+        this.TopMenuOn = true;
       }
     });
   }

@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+  text-align: center !important;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+th div {
+  margin: auto;
+}
+
+.main {
+  margin: 0px auto;
+	text-align: center;
+  width: 100%;
+  /* border: 5px solid black; */
+  padding-top: 16px;
+}
+
+.main div {
+  margin: auto;
+  /* display: inline-block; */
+  vertical-align: middle;
+  /* border: 5px solid black; */
+}
+
+.info {
+  width: 90%;
+  text-align: center;
+}
+
+::ng-deep .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+}
+
+:host(app-seminar) { width:100% }
