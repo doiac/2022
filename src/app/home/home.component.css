@@ -55,3 +55,11 @@ img {
   /* height: 50px; */
   /* border: 2px solid black; */
 }
+
+
+@media only screen and (max-width:900px){
+  .img-container {
+    margin: 0px auto;
+    width: 100%;
+  }
+}

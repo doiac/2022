@@ -7,8 +7,10 @@
       close
     </mat-icon>
   </button>
+  <a routerLink='/home'>
   <img src="assets/image/logo.png" alt="logo">
   <span>2022國立臺灣海洋大學校園徵才月</span>
+  </a>
   <app-menu *ngIf="TopMenuOn"></app-menu>
 </mat-toolbar>
 
@@ -61,7 +63,7 @@
     <div class="mat-elevation-z4 content">
       <router-outlet></router-outlet>
     </div>
-</mat-sidenav-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-
-<footer></footer>
+<app-footer></app-footer>

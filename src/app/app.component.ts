@@ -30,7 +30,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 840px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 900px)']).subscribe((res) => {
       this.sidenav.close();
       if(res.matches){
         this.sidenav.mode = 'over';
