@@ -33,6 +33,10 @@ mat-sidenav {
   text-align: center;
 }
 
+.mat-sidenav-container::-webkit-scrollbar {
+    display: none;
+}
+
 .content {
   height: auto;
   /* width: 100%; */
