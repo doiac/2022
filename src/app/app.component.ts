@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   public clickSidenavMenu(){
-    console.log('click');
+    // console.log('click');
     this.sidenav.close();
   }
 
