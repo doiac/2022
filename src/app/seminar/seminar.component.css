@@ -32,8 +32,18 @@ th div {
 }
 
 .info {
+  padding: 16px;
+  float: left;
+  width: auto;
+  text-align: left;
+}
+
+.tableContent {
   width: 90%;
-  text-align: center;
+}
+
+mat-form-field {
+  width: 90% !important;
 }
 
 ::ng-deep .mat-sort-header-container {

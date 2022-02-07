@@ -1,19 +1,20 @@
 
 <div class="main">
   <div class="info">
-    搜尋說明會參與企業
-    <hr>
+    說明會參與企業
+    <!-- <hr> -->
     <!-- <img src="../assets/image/se.png" alt=""> -->
   </div>
   <div class="seminarContent">
     <mat-form-field appearance="standard">
       <mat-label>
         <mat-icon>search</mat-icon>
+        <span>搜尋</span>
       </mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. 航運" #input>
     </mat-form-field>
 
-    <div class="mat-elevation-z8">
+    <div class="mat-elevation-z8 tableContent">
       <table mat-table [dataSource]="dataSource" matSort>
 
         <!-- Insdustry Column -->
