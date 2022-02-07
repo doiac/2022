@@ -1,3 +1,33 @@
+hr {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+  line-height: 1.6;
+  color: #303233;
+  font-size: 18px;
+  word-wrap: break-word;
+  height: 0;
+  box-sizing: content-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+p {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
+  font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+  color: rgb(201, 196, 189);
+  word-wrap: break-word;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+
 .homeMain {
   margin: 0px auto;
 	text-align: center;

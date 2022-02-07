@@ -12,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { SeminarComponent } from './seminar/seminar.component';
 import { FooterComponent } from './footer/footer.component';
+import { IgComponent } from './ig/ig.component';
+import { SouvenirComponent } from './souvenir/souvenir.component';
+import { ExpoComponent } from './expo/expo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     MenuComponent,
     SeminarComponent,
-    FooterComponent
+    FooterComponent,
+    IgComponent,
+    SouvenirComponent,
+    ExpoComponent
   ],
   imports: [
     BrowserModule,

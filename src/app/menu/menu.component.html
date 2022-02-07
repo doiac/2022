@@ -1,13 +1,13 @@
 <button mat-button routerLink='/home'>首頁</button>
 
-<button mat-button routerLink='/home'>徵才博覽會</button>
+<button mat-button routerLink='/expo'>徵才博覽會</button>
 
 <button mat-button routerLink='/seminar'>企業說明會</button>
 
 <button mat-button [matMenuTriggerFor]="ActivityMenu">徵才月活動</button>
 <mat-menu #ActivityMenu="matMenu">
-  <button mat-menu-item>IG抽獎</button>
-  <button mat-menu-item>紀念品兌換</button>
+  <button mat-menu-item routerLink='/ig'>IG抽獎</button>
+  <button mat-menu-item routerLink='/souvenir'>紀念品兌換</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="preMenu">歷屆活動</button>
