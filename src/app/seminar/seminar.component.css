@@ -1,3 +1,23 @@
+hr {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
+  font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+  line-height: 1.6;
+  color: rgb(201, 196, 189);
+  font-size: 18px;
+  word-wrap: break-word;
+  height: 0;
+  box-sizing: content-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-top-color: rgb(53, 57, 59);
+}
+
 p {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
@@ -34,11 +54,12 @@ th div {
 	text-align: center;
   width: 100%;
   /* border: 5px solid black; */
-  padding-top: 16px;
+  /* padding-top: 16px; */
 }
 
 .main div {
   margin: auto;
+  margin-top: 0px;
   /* display: inline-block; */
   vertical-align: middle;
   /* border: 5px solid black; */
@@ -47,16 +68,64 @@ th div {
 .info {
   padding: 16px;
   float: left;
-  width: auto;
+  width: 100%;
   text-align: left;
 }
 
+.sbs {
+  display: inline-flex;
+  /* align-items:center; */
+}
+
+.seminarintro {
+  width: 40%;
+  max-width: 815px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.seminarintro img {
+  width: 100%;
+  display: block;
+}
+
+.seminarContent {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .tableContent {
-  width: 90%;
+  width: 100%;
 }
 
 mat-form-field {
-  width: 90% !important;
+  width: 50% !important;
+}
+
+@media only screen and (max-width:900px){
+  .main {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+  .sbs {
+    display: block;
+  }
+  .seminarintro {
+    width: 80%;
+    max-width: 815px;
+    text-align: center;
+    display: block;
+  }
+  .seminarContent {
+    width: 80%;
+    display: block;
+    padding-bottom: 16px;
+  }
+  mat-form-field {
+    width: 100% !important;
+  }
 }
 
 ::ng-deep .mat-sort-header-container {

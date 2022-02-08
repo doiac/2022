@@ -31,8 +31,41 @@ p {
   margin-bottom: 26px;
 }
 
+.igMain {
+  max-width: 815px;
+}
+
 @media only screen and (max-width:900px){
-  .igMain{
+  .igMain {
     padding: 16px;
+  }
+}
+
+@media only screen and (max-width:425px){
+  .igMain h2{
+    font-size: medium;
+  }
+  .igMain p{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:350px){
+  .igMain h2{
+    font-size: small;
+  }
+  .igMain p{
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:275px){
+  .igMain p{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width:200px){
+  .igMain p{
+    font-size: 11px;
   }
 }
