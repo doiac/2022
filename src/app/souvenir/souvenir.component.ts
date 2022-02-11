@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface ExchangeTimeElement {
+  mo: string;
   tu: string;
   we: string;
   th: string;
@@ -15,21 +16,18 @@ export interface ExchangeItemsElement {
 }
 
 const EXCHANGE_TIME: ExchangeTimeElement[] = [
-  {tu: '', we: '3/2', th: '3/3', fr: '3/4'},
-  {tu: '3/8', we: '3/9', th: '3/10', fr: '3/11'},
-  {tu: '3/15', we: '3/16', th: '3/17', fr: '3/18'},
-  {tu: '3/22', we: '', th: '', fr: '3/25'},
-  {tu: '3/29', we: '3/30', th: '', fr: ''},
+  {mo:'', tu: '', we: '', th: '', fr: '3/4'},
+  {mo:'', tu: '3/8', we: '3/9', th: '', fr: '3/11'},
+  {mo:'', tu: '3/15', we: '3/16', th: '3/17', fr: '3/18'},
+  {mo:'', tu: '3/22', we: '', th: '', fr: '3/25'},
+  {mo:'3/28', tu: '3/29', we: '3/30', th: '', fr: ''},
 ];
 
 const EXCHANGE_COLOR: { [val: string] : string; } = {
   '':'',
-  '3/2':'red',
-  '3/3':'yellow',
   '3/4':'green',
   '3/8':'red',
   '3/9':'yellow',
-  '3/10':'green',
   '3/11':'blue',
   '3/15':'yellow',
   '3/16':'green',
@@ -37,6 +35,7 @@ const EXCHANGE_COLOR: { [val: string] : string; } = {
   '3/18':'red',
   '3/22':'green',
   '3/25':'yellow',
+  '3/28':'special',
   '3/29':'blue',
   '3/30':'red',
 };
@@ -52,7 +51,7 @@ const EXCHANGE_ITEMS: ExchangeItemsElement[] = [
   styleUrls: ['./souvenir.component.css']
 })
 export class SouvenirComponent implements OnInit {
-  exchangeTime_displayedColumns: string[] = ['tu', 'we', 'th', 'fr'];
+  exchangeTime_displayedColumns: string[] = ['mo', 'tu', 'we', 'th', 'fr'];
   exchangeTime_dataSource = EXCHANGE_TIME;
   exchangeItems_displayedColumns: string[] = ['items_1', 'point_1', 'items_2', 'point_2'];
   exchangeItems_dataSource = EXCHANGE_ITEMS;

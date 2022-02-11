@@ -12,6 +12,7 @@ export interface CompanyData {
 
 /** Constants used to fill up our data base. */
 const INDUSTRYS: string[] = [
+  '綜合商品批發代理業',
   '電腦及其週邊設備製造業',
   '貨運承攬業',
   '電腦週邊相關業',
@@ -28,6 +29,7 @@ const INDUSTRYS: string[] = [
   '海運貨櫃運輸物流業',
   '產物保險業',
   '半導體製造業',
+  '政府/民意機關',
   '工商顧問服務業',
   '政府/民意機關',
   '人身保險業',
@@ -36,22 +38,24 @@ const INDUSTRYS: string[] = [
   '船舶及其零件製造修配業',
 ];
 const PLACES: string[] = [
-  '第二演講廳',
-  '第一演講廳',
   '第一演講廳',
   '第二演講廳',
   '第一演講廳',
-  '第二演講廳',
   '第一演講廳',
-  '第二演講廳',
-  '第一演講廳',
-  '第二演講廳',
   '第二演講廳',
   '第一演講廳',
   '第二演講廳',
   '第一演講廳',
   '第二演講廳',
   '第一演講廳',
+  '第二演講廳',
+  '第二演講廳',
+  '第一演講廳',
+  '第二演講廳',
+  '第一演講廳',
+  '第二演講廳',
+  '第一演講廳',
+  '第二演講廳',
   '第一演講廳',
   '第二演講廳',
   '第一演講廳',
@@ -60,6 +64,7 @@ const PLACES: string[] = [
   '第二演講廳',
 ];
 const NAMES: string[] = [
+  '歐陸檢驗',
   '聯想環球科技',
   '陽明海運',
   '緯創資通',
@@ -76,6 +81,7 @@ const NAMES: string[] = [
   '長榮海運',
   '信德仕保險',
   '台積電',
+  '海巡署',
   '濤濤國際',
   '國防部',
   '三商美邦',
@@ -85,6 +91,7 @@ const NAMES: string[] = [
 ];
 
 const DATES: Date[] = [
+  new Date("2022-03-04"),
   new Date("2022-03-04"),
   new Date("2022-03-08"),
   new Date("2022-03-09"),
@@ -100,6 +107,7 @@ const DATES: Date[] = [
   new Date("2022-03-18"),
   new Date("2022-03-22"),
   new Date("2022-03-22"),
+  new Date("2022-03-25"),
   new Date("2022-03-25"),
   new Date("2022-03-28"),
   new Date("2022-03-28"),
@@ -126,11 +134,8 @@ export class SeminarComponent implements AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor() {
-    // Create 100 users
-    const users = Array.from({length: 22}, (_, k) => createFromDatabase(k + 1));
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+    const companies = Array.from({length: 24}, (_, k) => createFromDatabase(k + 1));
+    this.dataSource = new MatTableDataSource(companies);
   }
 
 

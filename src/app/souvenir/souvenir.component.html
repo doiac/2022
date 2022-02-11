@@ -21,6 +21,11 @@
   <div class="exchange">
     <table mat-table [dataSource]="exchangeTime_dataSource" class="exchangeTable">
 
+      <ng-container matColumnDef="mo">
+        <th mat-header-cell *matHeaderCellDef> 一 </th>
+        <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.mo)"> {{element.mo}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="tu">
         <th mat-header-cell *matHeaderCellDef> 二 </th>
         <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.tu)"> {{element.tu}} </td>
@@ -45,6 +50,7 @@
       <tr mat-row *matRowDef="let row; columns: exchangeTime_displayedColumns;"></tr>
     </table>
   </div>
+  <p>註：3/28可自選一色。</p>
   <div class="exchangeitems">
     <table mat-table [dataSource]="exchangeItems_dataSource" class="exchangeTable">
 

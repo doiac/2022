@@ -48,6 +48,7 @@ img {
 
 .exchange {
   max-width: 815px;
+  margin-bottom: 8px;
 }
 
 table{
@@ -82,6 +83,11 @@ td.green {
 
 td.blue {
   background-color: rgba(81, 187, 254, 1);
+}
+
+td.special {
+  background: linear-gradient(to right, rgba(81, 187, 254, 1) 0%, rgba(81, 187, 254, 1) 25%, rgba(254, 95, 85, 1) 25%, rgba(254, 95, 85, 1) 50%,
+  rgba(244, 231, 110, 1) 50%, rgba(244, 231, 110, 1) 75%, rgba(143, 247, 167, 1) 75%, rgba(143, 247, 167, 1) 100%);
 }
 
 .exchangeitems {
