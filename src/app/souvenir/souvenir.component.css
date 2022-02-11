@@ -31,12 +31,67 @@ p {
   margin-bottom: 26px;
 }
 
+img {
+  display: block;
+  height: 300px;
+  max-width: 815px;
+  /* width: 90%; */
+}
+
 .notifications {
   color: #e1d89f;
 }
 
 .svMain {
   max-width: 815px;
+}
+
+.exchange {
+  max-width: 815px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.exchangeTable th, td{
+  border: 1px solid black;
+  padding: 0 !important;
+  text-align: center;
+  vertical-align: middle!important;
+}
+
+.exchangeTable td {
+  color: black;
+}
+
+td.red {
+  background-color: rgba(254, 95, 85, 1);
+}
+
+td.yellow {
+  background-color: rgba(244, 231, 110, 1);
+}
+
+td.green {
+  background-color: rgba(143, 247, 167, 1);
+}
+
+td.blue {
+  background-color: rgba(81, 187, 254, 1);
+}
+
+.exchangeitems {
+  margin-top: 16px;
+  max-width: 815px;
+}
+
+.exchangeitems td{
+  width: 25%;
+  color: inherit;
 }
 
 @media only screen and (max-width:900px){

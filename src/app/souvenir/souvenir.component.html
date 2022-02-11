@@ -4,6 +4,7 @@
   <h2>領取集點卡</h2>
   <p>
     說明會入場時間會有工作人員於入口處發放。
+    <img src="assets/image/cpc-f.png" alt="cpc">
   </p>
   <hr>
   <h2>累積點數</h2>
@@ -11,11 +12,66 @@
     說明會退場時，持集點卡給予門口工作人員蓋章，並妥善保存集點卡。
   </p>
   <hr>
-  <h2>集點範圍</h2>
+  <h2>集點規則</h2>
   <p>
-    (1.) 同學持集點卡至徵才月每場說明會皆可累積1點，部分場次會有Bonus可得2點<br>
-    (2.) 下周Bonus名單於每周五更新。(<mat-icon class="notifications">notifications</mat-icon>部分場次會有驚喜)
+    (1.) 點數分為四種顏色，依據所集點數可兌換相應的紀念品。<br>
+    (2.) 同學持集點卡至徵才月每場說明會皆可累積顏色1點，部分場次會有Bonus可得2點，顏色分配如下圖。<br>
+    (3.) 下周Bonus名單於每周五更新。(<mat-icon class="notifications">notifications</mat-icon>部分場次會有驚喜)
   </p>
+  <div class="exchange">
+    <table mat-table [dataSource]="exchangeTime_dataSource" class="exchangeTable">
+
+      <ng-container matColumnDef="tu">
+        <th mat-header-cell *matHeaderCellDef> 二 </th>
+        <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.tu)"> {{element.tu}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="we">
+        <th mat-header-cell *matHeaderCellDef> 三 </th>
+        <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.we)"> {{element.we}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="th">
+        <th mat-header-cell *matHeaderCellDef> 四 </th>
+        <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.th)"> {{element.th}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fr">
+        <th mat-header-cell *matHeaderCellDef> 五 </th>
+        <td mat-cell *matCellDef="let element" [ngClass]="getClassOf(element.fr)"> {{element.fr}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="exchangeTime_displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: exchangeTime_displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="exchangeitems">
+    <table mat-table [dataSource]="exchangeItems_dataSource" class="exchangeTable">
+
+      <ng-container matColumnDef="items_1">
+        <th mat-header-cell *matHeaderCellDef> 品項 </th>
+        <td mat-cell *matCellDef="let element"> {{element.items_1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="point_1">
+        <th mat-header-cell *matHeaderCellDef> 點數 </th>
+        <td mat-cell *matCellDef="let element"> {{element.point_1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="items_2">
+        <th mat-header-cell *matHeaderCellDef> 品項 </th>
+        <td mat-cell *matCellDef="let element"> {{element.items_2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="point_2">
+        <th mat-header-cell *matHeaderCellDef> 點數 </th>
+        <td mat-cell *matCellDef="let element"> {{element.point_2}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="exchangeItems_displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: exchangeItems_displayedColumns;"></tr>
+    </table>
+  </div>
   <hr>
   <h2>點數使用及兌換注意事項</h2>
   <p>
