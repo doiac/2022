@@ -11,6 +11,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 export class AppComponent {
   title = '2022國立臺海大就業博覽會';
   TopMenuOn = true;
+  contentShadow = 'mat-elevation-z24';
+  footerShadow = 'mat-elevation-z8';
   // LeftMenuOn = false;
 
   @ViewChild(MatSidenav)
@@ -18,6 +20,17 @@ export class AppComponent {
 
   public constructor(private router: Router, private observer: BreakpointObserver) {
 
+  }
+
+  toggleShadow(isMobile: boolean){
+    if(isMobile){
+      this.contentShadow = '';
+      this.footerShadow = '';
+    }
+    else {
+      this.contentShadow = 'mat-elevation-z24';
+      this.footerShadow = 'mat-elevation-z8';
+    }
   }
 
   public negativePage(pageName: string){
@@ -35,10 +48,12 @@ export class AppComponent {
       if(res.matches){
         this.sidenav.mode = 'over';
         this.TopMenuOn = false;
+        this.toggleShadow(true);
       }
       else{
         this.sidenav.mode = 'side';
         this.TopMenuOn = true;
+        this.toggleShadow(false);
       }
     });
   }

@@ -75,8 +75,7 @@ th div {
 
 .info {
   padding: 16px;
-  float: left;
-  width: 100%;
+  width: auto;
   text-align: left;
 }
 
@@ -115,7 +114,6 @@ mat-form-field {
 @media only screen and (max-width:900px){
   .main {
     padding-top: 16px;
-    padding-left: 16px;
   }
   .sbs {
     display: block;

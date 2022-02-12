@@ -60,9 +60,9 @@
     </button> -->
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="mat-elevation-z24 content">
+    <div class="content" [ngClass]="[contentShadow]">
       <router-outlet></router-outlet>
     </div>
-    <app-footer class="mat-elevation-z8"></app-footer>
+    <app-footer [ngClass]="[footerShadow]"></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
