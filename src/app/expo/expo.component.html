@@ -1,3 +1,42 @@
 <div class="expoMain">
-  <h1>暫無頁面</h1>
+  <div class="info">
+    <h1>校園徵才博覽會</h1>
+    <p>
+      廠商以擺設攤位的方式，介紹最新工作職缺，並可與廠商面對面交流，詢問關於職務、產業或公司的相關問題，
+      進一步亦可直接投遞履歷表，或和用人主管當場面試。
+    </p>
+  </div>
+  <div class="mat-elevation-z24 expoContent">
+    <table mat-table [dataSource]="dataSource" class="expoTable">
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> 日期 </th>
+        <td mat-cell *matCellDef="let element; let i = index"
+        [attr.rowspan]="getRowSpan('date', i)"
+        [style.display]="getRowSpan('date', i) ? '' : 'none'"> {{element.date}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> 參展廠商 </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="place">
+        <th mat-header-cell *matHeaderCellDef> 地點 </th>
+        <td mat-cell *matCellDef="let element; let i = index"
+        [attr.rowspan]="getRowSpan('place', i)"
+        [style.display]="getRowSpan('place', i) ? '' : 'none'"> {{element.place}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> 時間 </th>
+        <td class="showTime" mat-cell *matCellDef="let element; let i = index"
+        [attr.rowspan]="getRowSpan('time', i)"
+        [style.display]="getRowSpan('time', i) ? '' : 'none'"> {{element.time}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
 </div>

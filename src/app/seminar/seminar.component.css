@@ -31,6 +31,14 @@ p {
   margin-bottom: 26px;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: white;
+}
+
 table {
   width: 100%;
   text-align: center !important;
@@ -49,20 +57,16 @@ th div {
   margin: auto;
 }
 
-.main {
+.smMain {
   margin: 0px auto;
 	text-align: center;
   width: 100%;
-  /* border: 5px solid black; */
-  /* padding-top: 16px; */
 }
 
-.main div {
+.smMain div {
   margin: auto;
   margin-top: 0px;
-  /* display: inline-block; */
   vertical-align: middle;
-  /* border: 5px solid black; */
 }
 
 .subtitle {
@@ -97,6 +101,10 @@ th div {
   display: block;
 }
 
+.annotation {
+  padding-top: 8px;
+}
+
 .seminarContent {
   width: 50%;
   display: inline-block;
@@ -112,7 +120,7 @@ mat-form-field {
 }
 
 @media only screen and (max-width:900px){
-  .main {
+  .smMain {
     padding-top: 16px;
   }
   .sbs {

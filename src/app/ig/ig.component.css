@@ -35,6 +35,14 @@ p {
   max-width: 815px;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: white;
+}
+
 @media only screen and (max-width:900px){
   .igMain {
     padding: 16px;
