@@ -33,6 +33,7 @@ p {
 
 .expoMain {
   margin: 0px auto;
+  margin-bottom: 32px;
 	text-align: center;
   width: 100%;
 }
@@ -66,17 +67,12 @@ table th, td {
 
 .expoTable th, td{
   border: 1px solid rgba(171, 159, 157, 1);
-  padding: 0 !important;
+  padding: 5px !important;
   text-align: center;
   vertical-align: middle!important;
 }
 
-.showTime {
-  white-space: pre;
-}
 
-@media only screen and (max-width:900px){
-  .expoMain {
-    padding: 16px;
-  }
+.showWhitespace {
+  white-space: pre-line;
 }

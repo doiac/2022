@@ -61,10 +61,13 @@ export class ExpoComponent implements OnInit {
         this.COMPANIES_DATA[i].date = '3/23(三)';
       else
         this.COMPANIES_DATA[i].date = '3/24(四)';
-      this.COMPANIES_DATA[i].place = '行政大樓展示廳';
+      this.COMPANIES_DATA[i].place =
+      `行政大樓
+        展示廳`;
       this.COMPANIES_DATA[i].time =
       `上午 10:00
-        ~下午 15:00`;
+        ~
+        下午 15:00`;
     }
   }
 
