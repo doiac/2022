@@ -41,8 +41,8 @@ const EXCHANGE_COLOR: { [val: string] : string; } = {
 };
 
 const EXCHANGE_ITEMS: ExchangeItemsElement[] = [
-  {'items_1': '綜合式便利貼', 'point_1':'任意 2 色，共 2 點', 'items_2': '鞋袋', 'point_2':'4 色，共 4 點'},
-  {'items_1': '帆布袋', 'point_1':'4 色，共 4 點', 'items_2': '', 'point_2':''},
+  {'items_1': '帆布袋', 'point_1':' 4 色 ３ 點', 'items_2': '鞋袋', 'point_2':' 3 色 2 點'},
+  {'items_1': '口罩(圖片待補)', 'point_1':'2 色 1 點', 'items_2': '', 'point_2':''},
 ];
 
 @Component({

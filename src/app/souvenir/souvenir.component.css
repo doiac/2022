@@ -46,6 +46,32 @@ img {
   max-width: 815px;
 }
 
+.img-container {
+  margin: 0px auto;
+	text-align: center;
+  width: 100%;
+}
+
+.img-container div {
+	display: inline-block;
+	vertical-align: middle;
+  margin: 8px;
+}
+
+.sbs {
+  width: 45%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.focus {
+  color: #D00000;
+}
+
 .exchange {
   max-width: 815px;
   margin-bottom: 8px;

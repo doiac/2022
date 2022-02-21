@@ -9,8 +9,15 @@
   <h2>領取集點卡</h2>
   <p>
     參與校園徵才月系列活動進場時皆可領取集點卡，入場時間會有工作人員於入口處發放。
-    <img src="assets/image/cpc-f.png" alt="cpc">
   </p>
+  <div class='img-container'>
+    <div class="sbs">
+      <img src="assets/image/cpc-f.jpg" alt="cpc-f">
+    </div>
+    <div class="sbs">
+      <img src="assets/image/cpc-b.jpg" alt="cpc-b">
+    </div>
+  </div>
   <hr>
   <h2>累積點數</h2>
   <p>
@@ -19,9 +26,10 @@
   <hr>
   <h2>集點規則</h2>
   <p>
-    (1.) 點數分為四種顏色，依據所集點數可兌換相應的紀念品。<br>
-    (2.) 同學持集點卡至徵才月每場說明會皆可累積顏色1點，部分場次會有Bonus可得2點，顏色分配如下圖。<br>
-    (3.) 下周Bonus名單於每周五更新。(<mat-icon class="notifications">notifications</mat-icon>部分場次會有驚喜)
+    (1.) 需收集顏色與點數，即可兌換相應紀念品。<br>
+    (2.) 顏色分為四種顏色，依據對應場次可獲得顏色，<span class="focus">顏色可重複使用</span>，顏色分配如下圖。<br>
+    (3.) 同學持集點卡至徵才月每場說明會皆可累積點數1點，部分場次會有Bonus可得2點，<span class="focus">點數不能重複使用</span>。<br>
+    (4.) 下周Bonus名單於每周五更新。(<mat-icon class="notifications">notifications</mat-icon>部分場次會有驚喜)
   </p>
   <div class="exchange">
     <table mat-table [dataSource]="exchangeTime_dataSource" class="exchangeTable">
@@ -59,7 +67,7 @@
   <hr>
   <h2>紀念品兌換</h2>
   <p>
-    集滿相對應點數後，可持有效在學或在職證明之文件至紀念品臺兌換相對應之紀念品。<br>
+    集滿相對應顏色及點數後，可持有效在學或在職證明之文件至紀念品臺兌換相對應之紀念品。<br>
     兌換時僅消除點數，參與過場次之顏色不會被消除，不需重複收集。<br>
   </p>
   <div class="exchangeitems">
@@ -89,11 +97,19 @@
       <tr mat-row *matRowDef="let row; columns: exchangeItems_displayedColumns;"></tr>
     </table>
   </div>
-  <p>
-    例1：若要兌換便利貼僅需要紅、黃、藍、綠其中2個『顏色』以及2點『點數』，只要參與2場次便可兌換。<br>
-    例2：若要同時兌換鞋袋,則需參與四色場次3/8、3/9、3/11以及3/16集滿4個『顏色』以及4點『點數』方可兌換。<br>
-    例3：若參與3/9及3/15兩場次，僅會獲取1個『顏色』及2點『點數』。<br>
-  </p>
+  <div class='img-container'>
+    <div class="sbs">
+      <img src="assets/image/canvasBag-1.jpg" alt="canvasBag-1">
+    </div>
+    <div class="sbs">
+      <img src="assets/image/canvasBag-2.jpg" alt="canvasBag-2">
+    </div>
+  </div>
+  <div class='img-container'>
+    <div>
+      <img src="assets/image/shoeBag.jpg" alt="shoeBag">
+    </div>
+  </div>
   <hr>
   <h2>點數使用及兌換注意事項</h2>
   <p>
@@ -106,5 +122,5 @@
   </p>
   <hr>
   <h2>點數有效期限</h2>
-  <p>中華民國111年03月02日至03月30日</p>
+  <p>中華民國111年03月04日至03月30日</p>
 </div>

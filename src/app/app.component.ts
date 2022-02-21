@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,16 @@ export class AppComponent {
   public constructor(private router: Router, private observer: BreakpointObserver) {
 
   }
+
+  ngOnInit() {
+  }
+
+  onActivate(event:HTMLElement) {
+    // console.log('change');
+    document.querySelector('mat-sidenav-content')!.scrollTo(0,0);
+  }
+  
+
 
   toggleShadow(isMobile: boolean){
     if(isMobile){

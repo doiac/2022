@@ -61,7 +61,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content" [ngClass]="[contentShadow]">
-      <router-outlet></router-outlet>
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
     </div>
     <app-footer [ngClass]="[footerShadow]"></app-footer>
   </mat-sidenav-content>
