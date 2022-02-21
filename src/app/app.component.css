@@ -41,7 +41,6 @@ mat-sidenav {
   /* width: 100%; */
   min-height: calc(100vh - 98px);
   margin: 16px;
-  margin-bottom: 0px;
   padding: 32px;
   display: flex;
   justify-content: center;

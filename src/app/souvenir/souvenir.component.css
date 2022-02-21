@@ -142,6 +142,12 @@ td.special {
   }
 }
 
+@media only screen and (max-width:400px){
+  .sbs {
+    width: auto;
+  }
+}
+
 @media only screen and (max-width:350px){
   .svMain h2{
     font-size: small;
