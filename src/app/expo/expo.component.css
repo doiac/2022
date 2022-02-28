@@ -52,6 +52,7 @@ p {
 
 .expoContent {
   width: 90%;
+  margin-bottom: 32px !important;
 }
 
 table {
@@ -75,4 +76,18 @@ table th, td {
 
 .showWhitespace {
   white-space: pre-line;
+}
+
+.expo_lottery {
+  width: 90%;
+  max-width: 815px;
+  text-align: left;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: white;
 }

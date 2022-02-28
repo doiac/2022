@@ -127,6 +127,14 @@ td.special {
   color: inherit;
 }
 
+iframe {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  min-width: 400px;
+  max-width: 815px;
+}
+
 @media only screen and (max-width:900px){
   .svMain{
     padding: 16px;
@@ -139,6 +147,10 @@ td.special {
   }
   .svMain p{
     font-size: 14px;
+  }
+  iframe {
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 
